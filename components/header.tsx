@@ -1,44 +1,42 @@
 import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import logo from './../assets/images/png/logo.png'
 
 
 
 export default function Header() {
     return (
 
-        <header className="bg-[#240736] p-[15px]">
+        <header className="bg-[#4fc1c6] p-4 shadow-lg">
             <div className='container'>
                 <div className='row flex items-center justify-between'>
-                    <ul className='list-none flex items-center gap-[20px]'>
+                    <div>
+                        <h1 className='text-[#fff] text-[30px]/[40px] font-extrabold'>Admin Panel</h1>
+                    </div>
+                    <ul className="list-none flex items-center gap-[20px]">
                         <li>
-                            <a className='text-[#fff] text-[22px]/[28px]'>
-                                Home
-                            </a>
+                            <Link href="/home">
+                                <p className='text-[#fff] text-[17px]/[22px] font-semibold'>Home</p>
+                            </Link>
                         </li>
                         <li>
-                            <a className='text-[#fff] text-[22px]/[28px]'>
-                                About
-                            </a>
+                            <Link href="/about">
+                                <p className='text-[#fff] text-[17px]/[22px] font-semibold'>About</p>
+                            </Link>
                         </li>
                         <li>
-                            <a className='text-[#fff] text-[22px]/[28px]'>
-                            Service
-                            </a>
+                            <Link href="/service">
+                                <p className='text-[#fff] text-[17px]/[22px] font-semibold'>Service</p>
+                            </Link>
                         </li>
                         <li>
-                            <a className='text-[#fff] text-[22px]/[28px]'>
-                                Faq
-                            </a>
-                        </li>
-                        <li>
-                            <a className='text-[#fff] text-[22px]/[28px]'>
-                                Contact
-                            </a>
+                            <Link href="/contact">
+                                <p className='text-[#fff] text-[17px]/[22px] font-semibold'>Contact Us</p>
+                            </Link>
                         </li>
                     </ul>
-                    <div className='flex gap-[20px]'>
-                        <button className='text-[#fff] text-[15px]/[21px]  rounded-[25px] border-[1px] py-[10px] px-[30px]'>Login</button>
-                        <button className='text-[#fff] text-[15px]/[21px]  rounded-[25px] border-[1px] py-[10px] px-[30px]'>Sign up</button>
-                    </div>
+
                 </div>
             </div>
         </header>
