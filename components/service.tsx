@@ -20,7 +20,7 @@ export default function service() {
                         Welcome To
                         <div className="font-bold text-9xl">
                             <ReactTyped
-                                strings={["Admin Panel !"]}
+                                strings={["General Layout !"]}
                                 typeSpeed={180}
                                 loop
                                 backSpeed={10}

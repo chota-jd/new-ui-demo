@@ -12,7 +12,7 @@ export default function Header() {
             <div className='container'>
                 <div className='row flex items-center justify-between'>
                     <div>
-                        <h1 className='text-[#fff] text-[30px]/[40px] font-extrabold'>Admin Panel</h1>
+                        <h1 className='text-[#fff] text-[30px]/[40px] font-extrabold'>General Layout</h1>
                     </div>
                     <ul className="list-none flex items-center gap-[20px]">
                         <li>
