@@ -8,7 +8,7 @@ import logo from './../assets/images/png/logo.png'
 export default function Header() {
     return (
 
-        <header className="bg-[#4fc1c6] p-4 shadow-lg fixed top-0 z-10 w-full">
+        <header className="bg-[#4fc1c6] p-4  fixed top-0 z-10 w-full">
             <div className='container'>
                 <div className='row flex items-center justify-between'>
                     <div>
