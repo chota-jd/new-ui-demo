@@ -66,7 +66,7 @@ export default function ContactPage() {
     return (
         <>
             <Header />
-            <div className="flex gap-8 p-5 max-w-screen-lg m-auto mb-[60px] mt-[102px]">
+            <div className="flex gap-8 p-5 max-w-screen-lg m-auto mb-[3.75rem] mt-[6.375rem]">
                 <Card className="w-[600px] shadow-lg">
                     <CardHeader>
                         <CardTitle>Reach Us</CardTitle>
@@ -150,7 +150,7 @@ export default function ContactPage() {
                                 <div className="text-black  p-6 justify-center items-center flex">
                                 <Button 
                                 onClick={handleSave} 
-                                className="text-[#fff] text-[15px]/[21px] rounded-[25px] border-[1px] py-[10px] px-[30px] justify-center items-center">
+                                className="text-[#fff] text-[0.938rem]/[1.313rem] rounded-full  py-2.5 px-[1.875rem] justify-center items-center">
                                         Submit
                                     </Button>
                                 </div>

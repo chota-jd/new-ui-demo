@@ -146,11 +146,11 @@ export default function Page() {
             <StoreProvider>
             <Header />
 
-            <div className='pt-[50px] mb-28 mt-[72px]'>
+            <div className='pt-[3.125rem] mb-28 mt-[4.5rem]'>
                 <div className='container'>
-                    <div className='bg-[#eee] pt-[10px] pr-[15px] pb-[10px] pl-[15px] rounded-lg mb-[20px] flex justify-between items-center'>
-                        <h1 className='text-[18px]/[25px] text-[#000] font-medium'>Basic Details</h1>
-                        <Button className='pt-[1px] pb-[1px] pl-[20px] pr-[20px] text-[15px]/[22px]'
+                    <div className='bg-[#eee] pt-2.5 pr-[0.938rem] pb-2.5 pl-[0.938rem] rounded-lg mb-5 flex justify-between items-center'>
+                        <h1 className='text-[1.125rem]/[1.563rem] text-[#000] font-medium'>Basic Details</h1>
+                        <Button className='pt-[0.063rem] pb-[0.063rem] pl-5 pr-5 text-[0.938rem]/[1.375rem]'
                             onClick={handleAddButtonClick}
                         >Add</Button>
 
@@ -207,11 +207,8 @@ export default function Page() {
 
 
                                 <DialogFooter>
-                                    <div className='flex justify-end items-end mt-[20px] gap-[20px]'>
-                                        {/* <Button className='pt-[1px] pb-[1px] pl-[20px] pr-[20px] text-[15px]/[22px]'
-                                    onClick={() => setFormVisible(false)}
-                                >Cancel</Button> */}
-                                        <Button className='pt-[1px] pb-[1px] pl-[20px] pr-[20px] text-[15px]/[22px]'
+                                    <div className='flex justify-end items-end mt-5 gap-5'>
+                                        <Button className='pt-[0.063rem] pb-[0.063rem] pl-5 pr-5 text-[0.938rem]/[1.375rem]'
                                             onClick={handleSave}
                                         >
                                         {editMode ? "Update" : "Add New"}
@@ -222,7 +219,7 @@ export default function Page() {
                         </Dialog>
 
                     </div>
-                    <Card className="shadow-lg pt-[20px]">
+                    <Card className="shadow-lg pt-5">
                         <CardContent>
                             <div className=''>
                                 <Table>
@@ -243,7 +240,7 @@ export default function Page() {
                                                 <TableCell>{item.email}</TableCell>
                                                 <TableCell className="">{item.number}</TableCell>
                                                 <TableCell className='text-right'>
-                                                    <div className='flex gap-[10px] justify-end'>
+                                                    <div className='flex gap-2.5 justify-end'>
                                                     <Button
                                                     onClick={() => handleEdit(item)}
                                                     >

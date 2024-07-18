@@ -32,7 +32,7 @@ export const appBasicDeatilsSlice = createSlice({
         deatils: null as IDetails[] | null,
     },
     reducers: {
-      setmedialoadingTrue: (state) => {
+      setdDeatilsloadingTrue: (state) => {
       },
     },
     extraReducers: (builder) => {
@@ -78,7 +78,7 @@ export const appBasicDeatilsSlice = createSlice({
     },
   });
   
-  export const { setmedialoadingTrue } = appBasicDeatilsSlice.actions;
+  export const { setdDeatilsloadingTrue } = appBasicDeatilsSlice.actions;
   export default appBasicDeatilsSlice.reducer;
   
 
