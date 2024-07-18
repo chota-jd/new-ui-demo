@@ -6,14 +6,10 @@ import { ReactTyped } from "react-typed";
 import Header from './header';
 import Footer from '@/components/footer';
 
-
-
-
 export default function service() {
     return (
         <>
                     <Header />
-
             <div className="mt-12">
                 <div className="flex gap-8 p-5 w-full h-full m-auto mb-[60px] mt-[180px]">
                     <h1 className='text-7xl'>
