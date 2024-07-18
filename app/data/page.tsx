@@ -145,8 +145,7 @@ export default function Page() {
         <>
             <StoreProvider>
             <Header />
-
-            <div className='pt-[3.125rem] mb-28 mt-[4.5rem]'>
+            <div className='pt-[7.5rem] pb-[1.875rem] h-[calc(100vh_-_72px)] overflow-y-auto'>
                 <div className='container'>
                     <div className='bg-[#eee] pt-2.5 pr-[0.938rem] pb-2.5 pl-[0.938rem] rounded-lg mb-5 flex justify-between items-center'>
                         <h1 className='text-[1.125rem]/[1.563rem] text-[#000] font-medium'>Basic Details</h1>
