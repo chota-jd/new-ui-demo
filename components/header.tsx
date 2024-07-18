@@ -8,7 +8,7 @@ import logo from './../assets/images/png/logo.png'
 export default function Header() {
     return (
 
-        <header className="bg-[#4fc1c6] p-4 shadow-lg">
+        <header className="bg-[#4fc1c6] p-4 shadow-lg fixed top-0 z-10 w-full">
             <div className='container'>
                 <div className='row flex items-center justify-between'>
                     <div>
@@ -26,8 +26,8 @@ export default function Header() {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/service">
-                                <p className='text-[#fff] text-[17px]/[22px] font-semibold'>Service</p>
+                            <Link href="/data">
+                                <p className='text-[#fff] text-[17px]/[22px] font-semibold'>Data</p>
                             </Link>
                         </li>
                         <li>

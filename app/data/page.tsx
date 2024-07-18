@@ -146,7 +146,7 @@ export default function Page() {
             <StoreProvider>
             <Header />
 
-            <div className='pt-[50px]'>
+            <div className='pt-[50px] mb-28 mt-[72px]'>
                 <div className='container'>
                     <div className='bg-[#eee] pt-[10px] pr-[15px] pb-[10px] pl-[15px] rounded-lg mb-[20px] flex justify-between items-center'>
                         <h1 className='text-[18px]/[25px] text-[#000] font-medium'>Basic Details</h1>
@@ -232,7 +232,7 @@ export default function Page() {
                                             <TableHead className="font-bold">Last Name</TableHead>
                                             <TableHead className="font-bold">Email</TableHead>
                                             <TableHead className='font-bold'>Contact</TableHead>
-                                            <TableHead className='text-right font-bold'>Action</TableHead>
+                                            <TableHead className='text-right font-bold'>Action / CrudOP</TableHead>
                                         </TableRow>
                                     </TableHeader>
                                     <TableBody>

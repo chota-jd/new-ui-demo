@@ -9,9 +9,9 @@ export default function page() {
   return (
     <>
     <Header/>
-    <About/>
+    {/* <About/> */}
     <Service/>
-    <Faq/>
+    {/* <Faq/> */}
     <Footer/>
     </>
   )

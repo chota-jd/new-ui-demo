@@ -66,7 +66,7 @@ export default function ContactPage() {
     return (
         <>
             <Header />
-            <div className="flex gap-8 p-5 max-w-screen-lg m-auto mb-[60px]">
+            <div className="flex gap-8 p-5 max-w-screen-lg m-auto mb-[60px] mt-[102px]">
                 <Card className="w-[600px] shadow-lg">
                     <CardHeader>
                         <CardTitle>Reach Us</CardTitle>
