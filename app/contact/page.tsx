@@ -21,38 +21,48 @@ import google from '@/assets/contact/google-plus.svg';
 import instagram from '@/assets/contact/instagram.svg';
 import whatsapp from '@/assets/contact/whatsapp.svg';
 import youtube from '@/assets/contact/youtube.svg';
-import { addContactDetails, IContactDetails } from '@/firebase/firebase';
+// import { addContactDetails, IContactDetails } from '@/config/firebase';
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState, store } from "@/store";
+import { addContactDeatils } from '@/utils/firebase';
 
 
 export default function ContactPage() {
-    const [contact, setContact] = useState<Omit<IContactDetails, 'createdAt'>>({
-        firstName: '', 
-        lastName: '',
-        subject: '',
-        message: '',
-    });
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [subject, setSubject] = useState("");
+    const [mesaage, setMesaage] = useState("");
+    const [date, setDate] = useState<Date | null>(null);
+    const [isOpen, setOpen] = useState(false);
+    const [formVisible, setFormVisible] = useState(false);
+    const [editMode, setEditMode] = useState(false);
+    const [currentItemId, setCurrentItemId] = useState<string | null>(null);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target;
-        setContact(prevContact => ({
-            ...prevContact,
-            [name]: value,
-        }));
-    };
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log("Submitting contact details:", contact); // Add console log here
-
-        try {
-            const addedContact = await addContactDetails(contact);
-            console.log("Contact details added successfully:", addedContact);
-            alert("Contact details added successfully!");
+ 
+    const handleSave = async () => {
+        console.log('Summit Button clicked!');
+        if (firstName && lastName && subject && mesaage) {
+          const contact = {
+            firstName,
+            lastName,
+            subject,
+            mesaage,
+          };
+    
+          try {
+            const savedContact = await addContactDeatils(contact); 
+            console.log('contact saved successfully:', savedContact);
+              // Reset form fields after successful save
+        setFirstName('');
+        setLastName('');
+        setSubject('');
+        setMesaage('');
         } catch (error) {
-            console.error("Error adding contact details:", error);
-            alert("Failed to add contact details.");
+            console.error('Error saving contact:', error);
         }
-    };
+    }
+}
+    
     return (
         <>
             <Header />
@@ -100,22 +110,47 @@ export default function ContactPage() {
                             <div className="max-w-lg m-auto">
                                 <div className="p-1 space-y-1.5">
                                     <Label htmlFor="firstName">First name</Label>
-                                    <Input type="text" name="firstName" placeholder="First name" value={contact.firstName} onChange={handleChange} />
+                                    <Input
+                                     type="text"
+                                     name="firstName" 
+                                     placeholder="First name" 
+                                     value={firstName} 
+                                     onChange={(e) => setFirstName(e.target.value)}
+                                    />
                                 </div>
                                 <div className="p-1 space-y-1.5">
                                     <Label htmlFor="lastName">Last name</Label>
-                                    <Input type="text" name="lastName" placeholder="Last name" value={contact.lastName} onChange={handleChange} />
+                                    <Input 
+                                     type="text" 
+                                     name="lastName" 
+                                     placeholder="Last name" 
+                                     value={lastName} 
+                                     onChange={(e) => setLastName(e.target.value)}
+                                     />
                                 </div>
                                 <div className="p-1 space-y-1.5">
                                     <Label htmlFor="subject">Subject</Label>
-                                    <Input type="text" name="subject" placeholder="Subject" value={contact.subject} onChange={handleChange} />
+                                    <Input 
+                                     type="text" 
+                                     name="subject" 
+                                     placeholder="Subject" 
+                                     value={subject} 
+                                     onChange={(e) => setSubject(e.target.value)}
+                                      />
                                 </div>
                                 <div className="p-1 space-y-1.5">
                                     <Label htmlFor="message">Message</Label>
-                                    <Textarea name="message" placeholder="Message" value={contact.message} onChange={handleChange} />
+                                    <Textarea 
+                                     name="message" 
+                                     placeholder="Message" 
+                                     value={mesaage} 
+                                     onChange={(e) => setMesaage(e.target.value)}
+                                     />
                                 </div>
-                                <div className="text-black mt-9 p-6 justify-center items-center flex">
-                                <Button onClick={handleSubmit} className="text-[#fff] text-[15px]/[21px] rounded-[25px] border-[1px] py-[10px] px-[30px] justify-center items-center">
+                                <div className="text-black  p-6 justify-center items-center flex">
+                                <Button 
+                                onClick={handleSave} 
+                                className="text-[#fff] text-[15px]/[21px] rounded-[25px] border-[1px] py-[10px] px-[30px] justify-center items-center">
                                         Submit
                                     </Button>
                                 </div>
@@ -129,4 +164,5 @@ export default function ContactPage() {
 
         </>
     )
+    
 }

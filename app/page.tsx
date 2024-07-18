@@ -13,15 +13,15 @@ export default function Home() {
   return (
 
    <>
-    <Header/>
+    {/* <Header/> */}
 
     {/* <FireBaseCrud/> */}
 
-    <About/>
+    {/* <About/> */}
     <Service/>
     {/* <Contact/>  */}
-    <Faq/>
-    <Footer/>
+    {/* <Faq/> */}
+    {/* <Footer/> */}
     </>
 
   );

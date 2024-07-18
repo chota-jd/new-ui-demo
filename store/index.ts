@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-// import Contact from "@/store/apps/contact";
+import Deatils from "@/store/apps/deatils";
 
 export const store = configureStore({
     reducer: {
-        // Contact
-    },
+      Deatils   
+     },
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware({
         serializableCheck: false,
