@@ -65,7 +65,6 @@ import { AppDispatch, RootState } from '@/store';
 
 
 export default function Page() {
-    const [formVisible, setFormVisible] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
