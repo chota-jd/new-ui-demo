@@ -38,7 +38,6 @@ import { addBasicDeatils, IDetails, updateBasicDeatils } from '@/utils/firebase'
 import { useDispatch, useSelector } from "react-redux";
 import { fetchBasicDeatils, removeBasicDeatils } from "@/store/apps/deatils";
 import { AppDispatch, RootState } from '@/store';
-import StoreProvider from '../StoreProvider';
 
 
 // const details = [
@@ -143,7 +142,6 @@ export default function Page() {
     }, [dispatch]);
     return (
         <>
-            <StoreProvider>
             <Header />
             <div className='pt-[7.5rem] pb-[1.875rem] h-[calc(100vh_-_72px)] overflow-y-auto'>
                 <div className='container'>
@@ -264,7 +262,6 @@ export default function Page() {
             <div>
                 <Footer />
             </div>
-            </StoreProvider> 
         </>
     );
 }
